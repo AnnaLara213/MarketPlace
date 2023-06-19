@@ -4,20 +4,18 @@ public class Usuario {
 	private int id;
 	private	String nome;
 	private String email;
-	private	String cep_endereco;
-	private String estado;
-	private int telefone;
+	private String telefone;
+	private String cpf;
 	private static int contador_Usuario = 0;
 	
 	public Usuario() {
 		
 	}
-	public Usuario(String nome, String email, String cep_endereco, String estado, int telefone) {
+	public Usuario(String nome, String email, String telefone, String cpf) {
 		this.setNome(nome);
 		this.setEmail(email);
-		this.setCep_endereco(cep_endereco);
-		this.setEstado(estado);
 		this.setTelefone(telefone);
+		this.setCpf(cpf);
 		contador_Usuario++;
 	}
 	public int getId() {
@@ -38,28 +36,23 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getCep_endereco() {
-		return cep_endereco;
-	}
-	public void setCep_endereco(String cep_endereco) {
-		this.cep_endereco = cep_endereco;
-	}
-	public String getEstado() {
-		return estado;
-	}
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-	public int getTelefone() {
+	
+	public String getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(int telefone) {
-		this.telefone = telefone;
+	public void setTelefone(String telefone2) {
+		this.telefone = telefone2;
 	}
 	public static int getContador() {
 		return contador_Usuario;
 	}
 	public static void setContador(int contador) {
 		Usuario.contador_Usuario = contador;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 }

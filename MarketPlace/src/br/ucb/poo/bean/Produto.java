@@ -1,23 +1,23 @@
 package br.ucb.poo.bean;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Produto {
 	private int id;
 	private	String nome;
-	private int preco;
+	private String preco;
 	private String descricao;
 	private static int contador_produto = 0;
-	private int id_Vende_prod;
 	
-	public Produto(String nome, int preco, String descricao, int id_Vende_prod) {
+	public Produto() {
+
+	} 
+	
+	public Produto(String nome, String preco, String descricao) {
 		this.nome = nome;
 		this.preco = preco;
 		this.descricao = descricao;
-		this.id_Vende_prod = id_Vende_prod;
 		contador_produto++;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
@@ -32,10 +32,10 @@ public class Produto {
 		this.nome = nome;
 	}
 	
-	public int getPreco() {
+	public String getPreco() {
 		return preco;
 	}
-	public void setPreco(int preco) {
+	public void setPreco(String preco) {
 		this.preco = preco;
 	}
 	
@@ -51,14 +51,4 @@ public class Produto {
 	public static void setContador(int contador) {
 		Produto.contador_produto = contador;
 	}
-
-	public int getId_Vende_prod() {
-		return id_Vende_prod;
-	}
-
-	public void setId_Vende_prod(int id_Vende_prod) {
-		this.id_Vende_prod = id_Vende_prod;
-	}
-	
-	
 }
