@@ -4,19 +4,17 @@ public class Administrador {
 	private int id;
 	private	String nome;
 	private String email;
-	private	String cep_endereco;
-	private String estado;
-	private int telefone;
+	private String cpf;
+	private String telefone;
 
 	public Administrador() {
 		
 	}
 	
-	public Administrador(String nome, String email, String cep_endereco, String estado, int telefone) {
+	public Administrador(String nome, String email, String cpf, String telefone) {
 		this.setNome(nome);
 		this.setEmail(email);
-		this.setCep_endereco(cep_endereco);
-		this.setEstado(estado);
+		this.setCpf(cpf);
 		this.setTelefone(telefone);
 	}
 
@@ -44,28 +42,20 @@ public class Administrador {
 		this.email = email;
 	}
 
-	public String getCep_endereco() {
-		return cep_endereco;
-	}
-
-	public void setCep_endereco(String cep_endereco) {
-		this.cep_endereco = cep_endereco;
-	}
-
-	public String getEstado() {
-		return estado;
-	}
-
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-
-	public int getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(int telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
 }
